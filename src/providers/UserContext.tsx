@@ -7,12 +7,12 @@ import { z } from "zod";
 import { loginSchema } from "../pages/Login/LoginForm/loginSchema";
 import { registerSchema } from "../pages/Register/RegisterForm/registerSchema";
 
-export type LoginParameter = z.infer<typeof loginSchema>
-export type RegisterParameter = z.infer<typeof registerSchema>
+export type LoginParameter = z.infer<typeof loginSchema>;
+export type RegisterParameter = z.infer<typeof registerSchema>;
 
 interface UserProviderValue {
   userLogin: SubmitHandler<LoginParameter>;
-  userRegister: SubmitHandler<RegisterParameter>
+  userRegister: SubmitHandler<RegisterParameter>;
 }
 
 export const UserContext = createContext({} as UserProviderValue);
@@ -23,17 +23,15 @@ export const UserProvider = ({ children }: { children: React.ReactNode }) => {
 
   const userRegister = async (FormRegisterData: RegisterParameter) => {
     try {
-        await api.post("users", FormRegisterData)
+      await api.post("users", FormRegisterData);
 
-        toast.success("Registro realizado com sucesso!")
-        
-        navigate("/")
-        
+      toast.success("Registro realizado com sucesso!");
+
+      navigate("/");
     } catch (error: any) {
-        toast.error(error.response.data)
+      toast.error(error.response.data);
     }
-
-}
+  };
 
   const userLogin = async (FormData: LoginParameter) => {
     try {

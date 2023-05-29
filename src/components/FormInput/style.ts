@@ -22,6 +22,6 @@ export const StyledFormInput = styled.div<{ isFocused: boolean }>`
     border: none;
     color: var(--color-gray-600);
     font-size: 1rem;
-    padding: 0.5em
+    padding: 0.5em;
   }
 `;

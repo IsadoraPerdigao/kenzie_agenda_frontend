@@ -4,7 +4,7 @@ import { App } from "./App.tsx";
 import { BrowserRouter } from "react-router-dom";
 import { UserProvider } from "./providers/UserContext.tsx";
 import { ToastContainer } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
@@ -22,7 +22,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
         pauseOnFocusLoss
         draggable
         pauseOnHover
-        toastStyle={{color: "darkgray"}}
+        toastStyle={{ color: "darkgray" }}
       />
     </BrowserRouter>
   </React.StrictMode>
