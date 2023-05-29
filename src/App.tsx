@@ -1,8 +1,11 @@
+import { RoutesMain } from "./routes";
+import GlobalStyle from "./styles/GlobalStyle";
+
 export const App = () => {
   return (
     <>
-      <h1>Começou</h1>
+      <GlobalStyle />
+      <RoutesMain />
     </>
-  )
-}
-
+  );
+};
