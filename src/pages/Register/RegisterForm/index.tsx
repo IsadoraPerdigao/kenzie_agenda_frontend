@@ -23,9 +23,9 @@ export const RegisterForm = () => {
     <StyledFormContainer onSubmit={handleSubmit(userRegister)}>
       <FormInput type="text" text="Nome completo" {...register("fullName")} />
       {errors.fullName && <p className="error">{errors.fullName.message}</p>}
-      <FormInput type="text" text="Telefone" {...register("phoneNumber")} />
-      {errors.phoneNumber && (
-        <p className="error">{errors.phoneNumber.message}</p>
+      <FormInput type="text" text="Telefone" {...register("phone")} />
+      {errors.phone && (
+        <p className="error">{errors.phone.message}</p>
       )}
       <FormInput type="text" text="Email" {...register("email")} />
       {errors.email && <p className="error">{errors.email.message}</p>}
