@@ -10,8 +10,10 @@ export const StyledContainer = styled.main`
 
   .dashTitles {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 300px;
+    justify-items: start;
     padding: 0 50px 40px 50px;
     border-bottom: 1px solid var(--color-gray-300);
     color: var(--color-gray-500);

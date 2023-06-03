@@ -5,12 +5,15 @@ import { BrowserRouter } from "react-router-dom";
 import { UserProvider } from "./providers/UserContext.tsx";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { ContactsProvider } from "./providers/ContactsContext.tsx";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <BrowserRouter>
       <UserProvider>
-        <App />
+        <ContactsProvider>
+          <App />
+        </ContactsProvider>
       </UserProvider>
       <ToastContainer
         position="bottom-right"
