@@ -1,28 +1,13 @@
+import { useContext } from "react";
 import { StyledContactsList } from "./style";
+import { ContactsContext } from "../../providers/ContactsContext";
+import { ContactLi } from "../ContactLi";
 
 export const ContactsList = () => {
-  return (
-    <StyledContactsList>
-      <li>
-        <div className="contactName">
-          <div>
-            <span>A</span>
-          </div>
-          <p>Alexandre</p>
-        </div>
-        <p>alexandre@mail.com</p>
-        <p>987252388</p>
-      </li>
-      <li>
-        <div className="contactName">
-          <div>
-            <span>C</span>
-          </div>
-          <p>Caio</p>
-        </div>
-        <p>caio@mail.com</p>
-        <p>987252388</p>
-      </li>
-    </StyledContactsList>
-  );
+  const { filteredContacts } = useContext(ContactsContext);
+
+  const contactsLi = filteredContacts.map((contact) => (
+    <ContactLi contact={contact} key={contact.id} />
+  ));
+  return <StyledContactsList>{contactsLi}</StyledContactsList>;
 };

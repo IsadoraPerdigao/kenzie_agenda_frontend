@@ -19,6 +19,7 @@ export const StyledFormInput = styled.div<{ isFocused: boolean }>`
   }}
 
   input {
+    width: 100%;
     border: none;
     color: var(--color-gray-600);
     font-size: 1rem;
